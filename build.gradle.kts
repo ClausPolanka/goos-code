@@ -51,6 +51,10 @@ sourceSets {
 }
 
 tasks.withType<Test> {
+    jvmArgs(
+        "--add-opens=java.logging/java.util.logging=ALL-UNNAMED",
+        "--add-opens=java.base/java.lang=ALL-UNNAMED"
+    )
     testLogging {
         events("passed", "skipped", "failed")
     }
