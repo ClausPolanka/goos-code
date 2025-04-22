@@ -1,3 +1,4 @@
+```mermaid
 stateDiagram-v2
     [*] --> JOINING
     JOINING --> BIDDING : receive price
@@ -7,3 +8,4 @@ stateDiagram-v2
     BIDDING --> LOST    : auction closed
     WINNING --> BIDDING : price > bid / new bid
     WINNING --> WON     : auction closed
+```
