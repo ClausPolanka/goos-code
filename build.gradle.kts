@@ -35,6 +35,21 @@ dependencies {
     })
 }
 
+sourceSets {
+    named("test") {
+        java {
+            setSrcDirs(
+                listOf(
+                    "src/test/java",
+                    "src/test/unit",
+                    "src/test/integration",
+                    "src/test/end-to-end"
+                )
+            )
+        }
+    }
+}
+
 tasks.withType<Test> {
     testLogging {
         events("passed", "skipped", "failed")
